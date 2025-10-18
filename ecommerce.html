@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - E-commerce Sayti</title>
+    <link rel="stylesheet" href="ecommerce-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1><i class="fas fa-laptop"></i> TechStore</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link">Bosh sahifa</a>
+                    <a href="#products" class="nav-link">Mahsulotlar</a>
+                    <a href="#about" class="nav-link">Haqida</a>
+                    <a href="#contact" class="nav-link">Kontakt</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Qidirish...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                    <div class="user-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Zamonaviy Texnologiyalar</h1>
+                    <p>Eng yaxshi narxlarda telefonlar, noutbuklar va boshqa elektronika</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Mahsulotlarni ko'rish</button>
+                        <button class="btn btn-secondary">Aksiya</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="product-showcase">
+                        <div class="product-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Telefonlar</span>
+                        </div>
+                        <div class="product-item">
+                            <i class="fas fa-laptop"></i>
+                            <span>Noutbuklar</span>
+                        </div>
+                        <div class="product-item">
+                            <i class="fas fa-headphones"></i>
+                            <span>Aksessuarlar</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Kategoriyalar</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Telefonlar</h3>
+                    <p>Smartfonlar va telefonlar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Noutbuklar</h3>
+                    <p>Laptop va kompyuterlar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Aksessuarlar</h3>
+                    <p>Quloqchinlar va aksessuarlar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Televizorlar</h3>
+                    <p>Smart TV va televizorlar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Mashhur Mahsulotlar</h2>
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">Hammasi</button>
+                <button class="filter-btn" data-filter="phones">Telefonlar</button>
+                <button class="filter-btn" data-filter="laptops">Noutbuklar</button>
+                <button class="filter-btn" data-filter="accessories">Aksessuarlar</button>
+            </div>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 15 Pro</h3>
+                        <p class="product-description">Eng yangi iPhone modeli</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$999</span>
+                            <span class="old-price">$1099</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="iPhone 15 Pro" data-price="999">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="product-badge sale">-15%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MacBook Pro M3</h3>
+                        <p class="product-description">Professional noutbuk</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$1999</span>
+                            <span class="old-price">$2299</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="MacBook Pro M3" data-price="1999">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AirPods Pro</h3>
+                        <p class="product-description">Wireless quloqchinlar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$249</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="AirPods Pro" data-price="249">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy S24</h3>
+                        <p class="product-description">Android flagship</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$799</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy S24" data-price="799">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dell XPS 13</h3>
+                        <p class="product-description">Ultrabook</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$1299</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Dell XPS 13" data-price="1299">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <div class="product-badge sale">-20%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony WH-1000XM5</h3>
+                        <p class="product-description">Noise-cancelling quloqchinlar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$399</span>
+                            <span class="old-price">$499</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Sony WH-1000XM5" data-price="399">
+                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Nima uchun bizni tanlash kerak?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Tez Yetkazib Berish</h3>
+                    <p>24 soat ichida bepul yetkazib berish</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Xavfsizlik</h3>
+                    <p>SSL sertifikat va xavfsiz to'lov</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Qaytarish</h3>
+                    <p>30 kun ichida bepul qaytarish</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Qo'llab-quvvatlash</h3>
+                    <p>24/7 mijozlar xizmati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Yangiliklar haqida xabar oling</h2>
+                <p>Eng yaxshi takliflar va yangi mahsulotlar haqida birinchi bo'lib bilib oling</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email manzilingiz" required>
+                    <button type="submit" class="btn btn-primary">Obuna bo'lish</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-laptop"></i> TechStore</h3>
+                    <p>Eng yaxshi texnologiya mahsulotlari</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Kategoriyalar</h3>
+                    <ul>
+                        <li><a href="#">Telefonlar</a></li>
+                        <li><a href="#">Noutbuklar</a></li>
+                        <li><a href="#">Aksessuarlar</a></li>
+                        <li><a href="#">Televizorlar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Xizmatlar</h3>
+                    <ul>
+                        <li><a href="#">Yetkazib berish</a></li>
+                        <li><a href="#">Qaytarish</a></li>
+                        <li><a href="#">Kafolat</a></li>
+                        <li><a href="#">Qo'llab-quvvatlash</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +998 90 123 45 67</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.uz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Toshkent, O'zbekiston</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Savat</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be added here dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Jami: $<span id="cart-total">0</span></strong>
+                </div>
+                <button class="btn btn-primary checkout-btn">Buyurtma berish</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="ecommerce-script.js"></script>
+</body>
+</html>
