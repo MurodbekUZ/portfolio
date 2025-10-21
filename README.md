@@ -75,9 +75,9 @@ portfolio/
 
 2. **Kontakt Ma'lumotlari**
    ```html
-   <p>your.email@example.com</p>
-   <p>+998 90 123 45 67</p>
-   <p>Toshkent, O'zbekiston</p>
+   <p>murodbekazatov126@gmail.com</p>
+   <p>+998 88 603 22 82</p>
+   <p>Xorazm, O'zbekiston</p>
    ```
 
 3. **Mahoratlar**

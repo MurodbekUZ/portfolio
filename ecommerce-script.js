@@ -447,3 +447,4 @@ mobileStyle.textContent = `
     }
 `;
 document.head.appendChild(mobileStyle);
+
