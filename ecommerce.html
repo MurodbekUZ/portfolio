@@ -104,6 +104,34 @@
                     <h3>Televizorlar</h3>
                     <p>Smart TV va televizorlar</p>
                 </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tablet-alt"></i>
+                    </div>
+                    <h3>Planshetlar</h3>
+                    <p>iPad va Android planshetlar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Kameralar</h3>
+                    <p>Foto va video kameralar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>O'yin pristavkalari</h3>
+                    <p>Konsollar va o'yinlar</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-watch-smart"></i>
+                    </div>
+                    <h3>Aqlli soatlar</h3>
+                    <p>Smartwatch va fitnes trekerlar</p>
+                </div>
             </div>
         </div>
     </section>
@@ -117,14 +145,17 @@
                 <button class="filter-btn" data-filter="phones">Telefonlar</button>
                 <button class="filter-btn" data-filter="laptops">Noutbuklar</button>
                 <button class="filter-btn" data-filter="accessories">Aksessuarlar</button>
+                <button class="filter-btn" data-filter="televizorlar">Televizorlar</button>
+                <button class="filter-btn" data-filter="planshetlar">Planshetlar</button>
+                <button class="filter-btn" data-filter="kameralar">Kameralar</button>
+                <button class="filter-btn" data-filter="oyinpristavkalari">O'yin pristavkalari</button>
+                <button class="filter-btn" data-filter="aqllisoatlar">Aqlli soatlar</button>
             </div>
             <div class="products-grid">
-                <!-- Product 1 -->
+                <!-- Phones -->
                 <div class="product-card" data-category="phones">
                     <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
+                        <img loading="lazy" src="https://picsum.photos/seed/iphone15pro/800/600" alt="iPhone 15 Pro" />
                         <div class="product-badge">Yangi</div>
                         <div class="product-actions">
                             <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
@@ -133,31 +164,113 @@
                     </div>
                     <div class="product-info">
                         <h3>iPhone 15 Pro</h3>
-                        <p class="product-description">Eng yangi iPhone modeli</p>
+                        <p class="product-description">A17 Pro chip, 120Hz ProMotion, Titanium dizayn</p>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(4.9)</span>
                         </div>
                         <div class="product-price">
-                            <span class="current-price">$999</span>
-                            <span class="old-price">$1099</span>
+                            <span class="current-price">12 499 000 so'm</span>
+                            <span class="old-price">13 499 000 so'm</span>
                         </div>
-                        <button class="btn btn-primary add-to-cart" data-product="iPhone 15 Pro" data-price="999">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
+                        <button class="btn btn-primary add-to-cart" data-product="iPhone 15 Pro" data-price="12499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
                     </div>
                 </div>
 
-                <!-- Product 2 -->
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/galaxys24/800/600" alt="Samsung Galaxy S24" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy S24</h3>
+                        <p class="product-description">Dynamic AMOLED 2X, 200MP kamera, Snapdragon</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">9 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy S24" data-price="9999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/pixel8pro/800/600" alt="Google Pixel 8 Pro" />
+                        <div class="product-badge sale">-10%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Google Pixel 8 Pro</h3>
+                        <p class="product-description">Tensor G3, ilg'or kamera, toza Android</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">10 999 000 so'm</span>
+                            <span class="old-price">12 199 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Google Pixel 8 Pro" data-price="10999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/redminote12pro/800/600" alt="Redmi Note 12 Pro" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Redmi Note 12 Pro</h3>
+                        <p class="product-description">108MP kamera, katta batareya</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">3 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Redmi Note 12 Pro" data-price="3499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/oneplus11/800/600" alt="OnePlus 11" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>OnePlus 11</h3>
+                        <p class="product-description">120Hz AMOLED, tezkor zaryad</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">7 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="OnePlus 11" data-price="7499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Laptops -->
                 <div class="product-card" data-category="laptops">
                     <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-laptop"></i>
-                        </div>
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="MacBook Pro M3" />
                         <div class="product-badge sale">-15%</div>
                         <div class="product-actions">
                             <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
@@ -166,93 +279,22 @@
                     </div>
                     <div class="product-info">
                         <h3>MacBook Pro M3</h3>
-                        <p class="product-description">Professional noutbuk</p>
+                        <p class="product-description">Liquid Retina XDR, uzoq batareya</p>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(4.8)</span>
                         </div>
                         <div class="product-price">
-                            <span class="current-price">$1999</span>
-                            <span class="old-price">$2299</span>
+                            <span class="current-price">24 999 000 so'm</span>
+                            <span class="old-price">27 999 000 so'm</span>
                         </div>
-                        <button class="btn btn-primary add-to-cart" data-product="MacBook Pro M3" data-price="1999">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
+                        <button class="btn btn-primary add-to-cart" data-product="MacBook Pro M3" data-price="24999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
                     </div>
                 </div>
 
-                <!-- Product 3 -->
-                <div class="product-card" data-category="accessories">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-headphones"></i>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>AirPods Pro</h3>
-                        <p class="product-description">Wireless quloqchinlar</p>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>(4.5)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">$249</span>
-                        </div>
-                        <button class="btn btn-primary add-to-cart" data-product="AirPods Pro" data-price="249">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-category="phones">
-                    <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <div class="product-actions">
-                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
-                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Samsung Galaxy S24</h3>
-                        <p class="product-description">Android flagship</p>
-                        <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(4.7)</span>
-                        </div>
-                        <div class="product-price">
-                            <span class="current-price">$799</span>
-                        </div>
-                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy S24" data-price="799">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
                 <div class="product-card" data-category="laptops">
                     <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-laptop"></i>
-                        </div>
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="Dell XPS 13" />
                         <div class="product-badge">Yangi</div>
                         <div class="product-actions">
                             <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
@@ -261,30 +303,110 @@
                     </div>
                     <div class="product-info">
                         <h3>Dell XPS 13</h3>
-                        <p class="product-description">Ultrabook</p>
+                        <p class="product-description">InfinityEdge ekranli ultrabook</p>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
                             <span>(4.6)</span>
                         </div>
                         <div class="product-price">
-                            <span class="current-price">$1299</span>
+                            <span class="current-price">16 499 000 so'm</span>
                         </div>
-                        <button class="btn btn-primary add-to-cart" data-product="Dell XPS 13" data-price="1299">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
+                        <button class="btn btn-primary add-to-cart" data-product="Dell XPS 13" data-price="16499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
                     </div>
                 </div>
 
-                <!-- Product 6 -->
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop" alt="ASUS ROG Zephyrus" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>ASUS ROG Zephyrus</h3>
+                        <p class="product-description">Qudratli o'yin noutbuki RTX grafikasi bilan</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">21 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="ASUS ROG Zephyrus" data-price="21999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop" alt="Lenovo Legion 5" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lenovo Legion 5</h3>
+                        <p class="product-description">Ryzen protsessor, RTX grafika</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">18 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Lenovo Legion 5" data-price="18999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="HP Spectre x360" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>HP Spectre x360</h3>
+                        <p class="product-description">2-in-1 dizayn, premium qurilish</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">17 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="HP Spectre x360" data-price="17499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Accessories -->
                 <div class="product-card" data-category="accessories">
                     <div class="product-image">
-                        <div class="product-placeholder">
-                            <i class="fas fa-headphones"></i>
+                        <img loading="lazy" src="https://picsum.photos/seed/airpodspro/800/600" alt="AirPods Pro" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
                         </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>AirPods Pro</h3>
+                        <p class="product-description">Faol shovqinni bekor qiluvchi quloqchinlar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                    <div class="product-price">
+                        <span class="current-price">2 999 000 so'm</span>
+                    </div>
+                        <button class="btn btn-primary add-to-cart" data-product="AirPods Pro" data-price="2999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/sonywh1000xm5/800/600" alt="Sony WH-1000XM5" />
                         <div class="product-badge sale">-20%</div>
                         <div class="product-actions">
                             <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
@@ -293,22 +415,745 @@
                     </div>
                     <div class="product-info">
                         <h3>Sony WH-1000XM5</h3>
-                        <p class="product-description">Noise-cancelling quloqchinlar</p>
+                        <p class="product-description">Sinfidagi eng yaxshi shovqin bekor qilishi</p>
                         <div class="product-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                             <span>(4.9)</span>
                         </div>
                         <div class="product-price">
-                            <span class="current-price">$399</span>
-                            <span class="old-price">$499</span>
+                            <span class="current-price">4 999 000 so'm</span>
+                            <span class="old-price">5 999 000 so'm</span>
                         </div>
-                        <button class="btn btn-primary add-to-cart" data-product="Sony WH-1000XM5" data-price="399">
-                            <i class="fas fa-shopping-cart"></i> Savatga qo'shish
-                        </button>
+                        <button class="btn btn-primary add-to-cart" data-product="Sony WH-1000XM5" data-price="4999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=800&auto=format&fit=crop" alt="Apple Watch Series 9" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple Watch Series 9</h3>
+                        <p class="product-description">Yangi S9 chip, Sog'liq monitoringi</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">4 799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Apple Watch Series 9" data-price="4799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Planshetlar -->
+                <div class="product-card" data-category="planshetlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/ipadair/800/600" alt="iPad Air (M1)" />
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPad Air (M1)</h3>
+                        <p class="product-description">11" Liquid Retina, M1 chip</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">8 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="iPad Air (M1)" data-price="8999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="planshetlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/galaxytabs9/800/600" alt="Galaxy Tab S9" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy Tab S9</h3>
+                        <p class="product-description">AMOLED displey, S Pen</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">7 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy Tab S9" data-price="7499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="planshetlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/xiaomipad6/800/600" alt="Xiaomi Pad 6" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Xiaomi Pad 6</h3>
+                        <p class="product-description">120Hz displey, Snapdragon</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">3 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Xiaomi Pad 6" data-price="3999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Kameralar -->
+                <div class="product-card" data-category="kameralar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/sonya7iii/800/600" alt="Sony A7 III" />
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony A7 III</h3>
+                        <p class="product-description">Full-frame, ajoyib kam yorug'lik</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">19 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Sony A7 III" data-price="19999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kameralar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/canonr10/800/600" alt="Canon EOS R10" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Canon EOS R10</h3>
+                        <p class="product-description">APS-C, tez autofokus</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">9 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Canon EOS R10" data-price="9999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kameralar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/nikonz50/800/600" alt="Nikon Z50" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Nikon Z50</h3>
+                        <p class="product-description">Kompakt mirrorless kamera</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">8 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Nikon Z50" data-price="8499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- O'yin pristavkalari -->
+                <div class="product-card" data-category="oyinpristavkalari">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/ps5/800/600" alt="PlayStation 5" />
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony PlayStation 5</h3>
+                        <p class="product-description">Ultra tez SSD, 4K o'yinlar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6 799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Sony PlayStation 5" data-price="6799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="oyinpristavkalari">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/xboxseriesx/800/600" alt="Xbox Series X" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Xbox Series X</h3>
+                        <p class="product-description">Kuchli 4K o'yin konsoli</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Xbox Series X" data-price="6499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="oyinpristavkalari">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/switcholed/800/600" alt="Nintendo Switch OLED" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Nintendo Switch OLED</h3>
+                        <p class="product-description">OLED ekran, gibrid dizayn</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">4 899 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Nintendo Switch OLED" data-price="4899000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Aqlli soatlar -->
+                <div class="product-card" data-category="aqllisoatlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/galaxywatch6/800/600" alt="Galaxy Watch6" />
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy Watch6</h3>
+                        <p class="product-description">Sog'liq kuzatuvi, premium dizayn</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">2 799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy Watch6" data-price="2799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="aqllisoatlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/amazfitgtr4/800/600" alt="Amazfit GTR 4" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Amazfit GTR 4</h3>
+                        <p class="product-description">Uzoq batareya, GPS</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1 699 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Amazfit GTR 4" data-price="1699000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop" alt="Logitech MX Master 3S" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Logitech MX Master 3S</h3>
+                        <p class="product-description">Premium simsiz sichqoncha</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Logitech MX Master 3S" data-price="999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="Anker PowerCore 20K" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Anker PowerCore 20K</h3>
+                        <p class="product-description">Tez zaryadlovchi powerbank</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Anker PowerCore 20K" data-price="499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- TVs -->
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1200&auto=format&fit=crop" alt="LG OLED C3 55" />
+                        <div class="product-badge">Yangi</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>LG OLED C3 55"</h3>
+                        <p class="product-description">4K OLED, Dolby Vision IQ, 120Hz</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">15 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="LG OLED C3 55\"" data-price="15999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/qledq80c65/1200/800" alt="Samsung QLED Q80C 65" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung QLED Q80C 65"</h3>
+                        <p class="product-description">4K QLED, HDR10+, Object Tracking Sound</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">13 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung QLED Q80C 65\"" data-price="13999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/xiaomip150/1200/800" alt="Xiaomi Mi TV P1 50" />
+                        <div class="product-badge sale">-12%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Xiaomi Mi TV P1 50"</h3>
+                        <p class="product-description">Android TV, Dolby Vision, keng ekran</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">5 999 000 so'm</span>
+                            <span class="old-price">6 699 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Xiaomi Mi TV P1 50\"" data-price="5999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/theframe55/1200/800" alt="Samsung The Frame 55" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung The Frame 55"</h3>
+                        <p class="product-description">Art Mode bilan nafis dizayn</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">12 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung The Frame 55\"" data-price="12499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Phones -->
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/iphone15/800/600" alt="iPhone 15" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 15</h3>
+                        <p class="product-description">Dynamic Island, A16 Bionic</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">10 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="iPhone 15" data-price="10499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/galaxya54/800/600" alt="Samsung Galaxy A54" />
+                        <div class="product-badge sale">-8%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Samsung Galaxy A54</h3>
+                        <p class="product-description">Stabil kamera, kuchli batareya</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">3 799 000 so'm</span>
+                            <span class="old-price">4 099 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Samsung Galaxy A54" data-price="3799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="phones">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/realme11pro/800/600" alt="Realme 11 Pro" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Realme 11 Pro</h3>
+                        <p class="product-description">120Hz ekran, tez zaryad</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.4)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">3 199 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Realme 11 Pro" data-price="3199000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Laptops -->
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/acerswift3/800/600" alt="Acer Swift 3" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Acer Swift 3</h3>
+                        <p class="product-description">Yengil shassi, uzoq batareya</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.4)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">9 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Acer Swift 3" data-price="9999000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="laptops">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/msikatana15/800/600" alt="MSI Katana 15" />
+                        <div class="product-badge sale">-10%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>MSI Katana 15</h3>
+                        <p class="product-description">O'yin uchun RTX grafikasi</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">14 399 000 so'm</span>
+                            <span class="old-price">15 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="MSI Katana 15" data-price="14399000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Accessories -->
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/jblflip6/800/600" alt="JBL Flip 6" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>JBL Flip 6</h3>
+                        <p class="product-description">Suvga chidamli kolonkalar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="JBL Flip 6" data-price="1499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="accessories">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/sandiskextreme/800/600" alt="SanDisk Extreme SSD 1TB" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>SanDisk Extreme SSD 1TB</h3>
+                        <p class="product-description">Tez tashqi xotira</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">1 899 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="SanDisk Extreme SSD 1TB" data-price="1899000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: TVs -->
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/tclc645/1200/800" alt="TCL QLED C645 55" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>TCL QLED C645 55"</h3>
+                        <p class="product-description">QLED ranglar, Google TV</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">7 799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="TCL QLED C645 55\"" data-price="7799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="televizorlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/hisenseu7k65/1200/800" alt="Hisense U7K 65" />
+                        <div class="product-badge sale">-7%</div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Hisense U7K 65"</h3>
+                        <p class="product-description">Mini-LED, HDR10+</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">9 299 000 so'm</span>
+                            <span class="old-price">9 999 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Hisense U7K 65\"" data-price="9299000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Planshetlar -->
+                <div class="product-card" data-category="planshetlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/ipad10gen/800/600" alt="iPad 10th Gen" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPad 10th Gen</h3>
+                        <p class="product-description">A14 Bionic, 10.9" ekran</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">6 799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="iPad 10th Gen" data-price="6799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="planshetlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/lenovop11pro/800/600" alt="Lenovo Tab P11 Pro" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lenovo Tab P11 Pro</h3>
+                        <p class="product-description">OLED ekran, toza dizayn</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.4)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">4 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Lenovo Tab P11 Pro" data-price="4499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Kameralar -->
+                <div class="product-card" data-category="kameralar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/goprohero12/800/600" alt="GoPro HERO 12" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>GoPro HERO 12</h3>
+                        <p class="product-description">4K60, mustahkam korpus</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.6)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">5 499 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="GoPro HERO 12" data-price="5499000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: O'yin pristavkalari aksessuarlari -->
+                <div class="product-card" data-category="oyinpristavkalari">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/dualsense/800/600" alt="DualSense Controller" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>DualSense Controller</h3>
+                        <p class="product-description">Haptic feedback, adaptive triggers</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">799 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="DualSense Controller" data-price="799000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
+                    </div>
+                </div>
+
+                <!-- Qo'shimcha: Aqlli soatlar -->
+                <div class="product-card" data-category="aqllisoatlar">
+                    <div class="product-image">
+                        <img loading="lazy" src="https://picsum.photos/seed/applewatchse2/800/600" alt="Apple Watch SE (2nd)" />
+                        <div class="product-actions">
+                            <button class="action-btn" title="Sevimlilar"><i class="far fa-heart"></i></button>
+                            <button class="action-btn" title="Taqqoslash"><i class="fas fa-balance-scale"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple Watch SE (2nd)</h3>
+                        <p class="product-description">Asosiy smart funksiyalar</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>(4.5)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">3 199 000 so'm</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart" data-product="Apple Watch SE (2nd)" data-price="3199000"><i class="fas fa-shopping-cart"></i> Savatga qo'shish</button>
                     </div>
                 </div>
             </div>
@@ -325,28 +1170,103 @@
                         <i class="fas fa-shipping-fast"></i>
                     </div>
                     <h3>Tez Yetkazib Berish</h3>
-                    <p>24 soat ichida bepul yetkazib berish</p>
+                    <p>Ko‘p shaharlarda 24 soat ichida yetkazib beramiz.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Kuryer xizmatlari</li>
+                        <li><i class="fas fa-check"></i> Ombordan olib ketish</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Xavfsizlik</h3>
-                    <p>SSL sertifikat va xavfsiz to'lov</p>
+                    <h3>Xavfsiz To‘lov</h3>
+                    <p>SSL, 3D Secure va tokenlashgan tranzaksiyalar.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Plastik karta / naqdsiz</li>
+                        <li><i class="fas fa-check"></i> Payme / Click / Uzum</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-badge-check"></i>
+                    </div>
+                    <h3>Rasmiy Kafolat</h3>
+                    <p>Mahsulotlar brend servisida kafolatlanadi.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 12 oygacha kafolat</li>
+                        <li><i class="fas fa-check"></i> Tez diagnostika</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3>Eng Yaxshi Narx</h3>
+                    <p>Aksiya va chegirmalar bilan hamyonbop takliflar.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Doimiy promo-kodlar</li>
+                        <li><i class="fas fa-check"></i> Bonus ballar</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-undo"></i>
                     </div>
-                    <h3>Qaytarish</h3>
-                    <p>30 kun ichida bepul qaytarish</p>
+                    <h3>Qaytarish oson</h3>
+                    <p>30 kun ichida tez va shaffof qaytarish.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Onlayn so‘rov</li>
+                        <li><i class="fas fa-check"></i> Kuryer olib ketadi</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Qo'llab-quvvatlash</h3>
-                    <p>24/7 mijozlar xizmati</p>
+                    <h3>24/7 Qo‘llab-quvvatlash</h3>
+                    <p>Telefon, Telegram va email orqali tez yordam.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Tez javob</li>
+                        <li><i class="fas fa-check"></i> Mutaxassis maslahati</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>Keng Assortiment</h3>
+                    <p>Turli brend va modellar doimiy yangilanadi.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> 5000+ SKU</li>
+                        <li><i class="fas fa-check"></i> Doimiy yangilanish</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3>Rasmiy Hujjatlar</h3>
+                    <p>Chek, hisob-faktura va shartnoma rasmiy tarzda.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Yuridik shaxslarga mos</li>
+                        <li><i class="fas fa-check"></i> Onlayn hujjatlar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features-metrics">
+                <div class="metric">
+                    <h4>50k+</h4>
+                    <span>Mamnun mijozlar</span>
+                </div>
+                <div class="metric">
+                    <h4>24 soat</h4>
+                    <span>O‘rtacha yetkazish</span>
+                </div>
+                <div class="metric">
+                    <h4>5000+</h4>
+                    <span>Mahsulot assortimenti</span>
                 </div>
             </div>
         </div>
@@ -423,9 +1343,52 @@
             <div class="cart-items">
                 <!-- Cart items will be added here dynamically -->
             </div>
+            <div class="delivery-form">
+                <h4>Yetkazib berish ma'lumotlari</h4>
+                <div class="delivery-grid">
+                    <div class="delivery-group">
+                        <label for="first-name">Ism</label>
+                        <input id="first-name" type="text" placeholder="Ism" required>
+                    </div>
+                    <div class="delivery-group">
+                        <label for="last-name">Familiya</label>
+                        <input id="last-name" type="text" placeholder="Familiya" required>
+                    </div>
+                </div>
+                <div class="delivery-grid">
+                    <div class="delivery-group">
+                        <label for="phone">Telefon</label>
+                        <input id="phone" type="tel" placeholder="99 123 45 67" required>
+                    </div>
+                    <div class="delivery-group">
+                        <label for="region">Viloyat/Shahar</label>
+                        <input id="region" type="text" placeholder="Toshkent" required>
+                    </div>
+                </div>
+                <div class="delivery-group">
+                    <label for="address">Manzil</label>
+                    <textarea id="address" rows="2" placeholder="Ko'cha, uy, kvartira" required></textarea>
+                </div>
+                <div class="delivery-grid">
+                    <div class="delivery-group">
+                        <label for="delivery-type">Yetkazib berish</label>
+                        <select id="delivery-type">
+                            <option value="standard">Standart (24-48 soat)</option>
+                            <option value="express">Ekspress (12-24 soat)</option>
+                        </select>
+                    </div>
+                    <div class="delivery-group">
+                        <label for="payment-method">To'lov</label>
+                        <select id="payment-method">
+                            <option value="card">Karta (onlayn)</option>
+                            <option value="cash">Naqd (kuryerga)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="cart-footer">
                 <div class="cart-total">
-                    <strong>Jami: $<span id="cart-total">0</span></strong>
+                    <strong>Jami: <span id="cart-total">0</span> so'm</strong>
                 </div>
                 <button class="btn btn-primary checkout-btn">Buyurtma berish</button>
             </div>

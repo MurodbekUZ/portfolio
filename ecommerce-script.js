@@ -13,6 +13,7 @@ const closeCartBtn = document.querySelector('.close-cart');
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
+    enhanceProductImages();
 });
 
 function initializeApp() {
@@ -46,6 +47,10 @@ function setupCart() {
             const productName = this.getAttribute('data-product');
             const productPrice = parseFloat(this.getAttribute('data-price'));
             addToCart(productName, productPrice);
+            // Open cart and focus delivery form for convenience
+            cartModal.classList.add('active');
+            const firstNameInput = document.getElementById('first-name');
+            if (firstNameInput) firstNameInput.focus();
         });
     });
 
@@ -102,7 +107,7 @@ function updateCartDisplay() {
     
     if (cart.length === 0) {
         cartItems.innerHTML = '<p style="text-align: center; color: #6b7280; padding: 2rem;">Savat bo\'sh</p>';
-        cartTotalElement.textContent = '0';
+        cartTotalElement.textContent = formatUZS(0);
         return;
     }
     
@@ -119,14 +124,14 @@ function updateCartDisplay() {
                 <h4>${item.name}</h4>
                 <p>Miqdor: ${item.quantity}</p>
             </div>
-            <div class="cart-item-price">$${itemTotal.toFixed(2)}</div>
+            <div class="cart-item-price">${formatUZS(itemTotal)} so'm</div>
             <button class="remove-item" onclick="removeFromCart('${item.name}')">O'chirish</button>
         `;
         
         cartItems.appendChild(cartItemElement);
     });
     
-    cartTotalElement.textContent = cartTotal.toFixed(2);
+    cartTotalElement.textContent = `${formatUZS(cartTotal)}`;
 }
 
 // Product Filtering
@@ -160,21 +165,94 @@ function setupProductFiltering() {
 // Search Functionality
 function setupSearch() {
     const searchInput = document.querySelector('.search-box input');
-    
-    searchInput.addEventListener('input', function() {
-        const searchTerm = this.value.toLowerCase();
-        const productCards = document.querySelectorAll('.product-card');
-        
-        productCards.forEach(card => {
-            const productName = card.querySelector('h3').textContent.toLowerCase();
-            const productDescription = card.querySelector('.product-description').textContent.toLowerCase();
-            
-            if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
+    const productCards = () => document.querySelectorAll('.product-card');
+    const productsSection = document.querySelector('#products');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    let debounceTimer;
+
+    // Create or get no-results message node
+    let noResultsNode = document.querySelector('#no-results');
+    if (!noResultsNode) {
+        noResultsNode = document.createElement('div');
+        noResultsNode.id = 'no-results';
+        noResultsNode.style.cssText = 'text-align:center;color:#6b7280;padding:1.5rem;display:none;';
+        const grid = document.querySelector('.products-grid');
+        grid.parentNode.insertBefore(noResultsNode, grid.nextSibling);
+    }
+
+    const normalize = (t) => (t || '').toString().toLowerCase().trim();
+
+    const clearHighlights = (card) => {
+        const titleEl = card.querySelector('h3');
+        const descEl = card.querySelector('.product-description');
+        if (titleEl && titleEl.dataset.originalText) titleEl.innerHTML = titleEl.dataset.originalText;
+        if (descEl && descEl.dataset.originalText) descEl.innerHTML = descEl.dataset.originalText;
+    };
+
+    const highlight = (el, term) => {
+        if (!el) return;
+        if (!el.dataset.originalText) el.dataset.originalText = el.innerHTML;
+        const raw = el.textContent;
+        const idx = raw.toLowerCase().indexOf(term);
+        if (term && idx !== -1) {
+            const before = raw.slice(0, idx);
+            const match = raw.slice(idx, idx + term.length);
+            const after = raw.slice(idx + term.length);
+            el.innerHTML = `${before}<mark style="background:#fde68a;color:inherit;padding:0 2px;border-radius:3px;">${match}</mark>${after}`;
+        } else if (!term && el.dataset.originalText) {
+            el.innerHTML = el.dataset.originalText;
+        }
+    };
+
+    const runSearch = (term) => {
+        const cards = productCards();
+        let visibleCount = 0;
+
+        // When typing, deactivate category filter and show all to search across
+        if (term) {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+        }
+
+        cards.forEach(card => {
+            clearHighlights(card);
+            const titleEl = card.querySelector('h3');
+            const descEl = card.querySelector('.product-description');
+            const name = normalize(titleEl ? titleEl.textContent : '');
+            const desc = normalize(descEl ? descEl.textContent : '');
+
+            const match = !term || name.includes(term) || desc.includes(term);
+            card.style.display = match ? 'block' : 'none';
+
+            if (match && term) {
+                highlight(titleEl, term);
+                highlight(descEl, term);
             }
+
+            if (match) visibleCount++;
         });
+
+        noResultsNode.textContent = visibleCount === 0 ? 'Mos mahsulot topilmadi.' : '';
+        noResultsNode.style.display = visibleCount === 0 ? 'block' : 'none';
+    };
+
+    searchInput.addEventListener('input', function() {
+        const term = normalize(this.value);
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => runSearch(term), 200);
+    });
+
+    // Press Enter to jump to products
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const term = normalize(this.value);
+            runSearch(term);
+            if (productsSection) {
+                const offsetTop = productsSection.offsetTop - 100;
+                window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+            }
+        }
     });
 }
 
@@ -328,11 +406,12 @@ document.querySelectorAll('.product-card').forEach(card => {
 document.querySelectorAll('.category-card').forEach(card => {
     card.addEventListener('click', function() {
         const category = this.querySelector('h3').textContent.toLowerCase();
+        const sanitize = (s) => s.toLowerCase().replace(/[\s'"’`-]/g, '');
         
         // Filter products by category
         const filterButtons = document.querySelectorAll('.filter-btn');
         const targetButton = Array.from(filterButtons).find(btn => 
-            btn.getAttribute('data-filter') === category.toLowerCase().replace(/\s+/g, '')
+            sanitize(btn.getAttribute('data-filter') || '') === sanitize(category)
         );
         
         if (targetButton) {
@@ -352,17 +431,51 @@ document.querySelector('.checkout-btn').addEventListener('click', function() {
         showNotification('Savat bo\'sh!', 'error');
         return;
     }
-    
-    // Simulate checkout process
-    showNotification('Buyurtma muvaffaqiyatli qabul qilindi!', 'success');
-    
+    // Validate delivery form
+    const firstName = (document.getElementById('first-name')?.value || '').trim();
+    const lastName = (document.getElementById('last-name')?.value || '').trim();
+    const phone = (document.getElementById('phone')?.value || '').trim();
+    const region = (document.getElementById('region')?.value || '').trim();
+    const address = (document.getElementById('address')?.value || '').trim();
+    const deliveryType = (document.getElementById('delivery-type')?.value || 'standard');
+    const paymentMethod = (document.getElementById('payment-method')?.value || 'card');
+
+    const phoneDigits = phone.replace(/\D/g, '');
+    if (!firstName || !lastName || !phone || !region || !address) {
+        showNotification('Iltimos, yetkazib berish ma\'lumotlarini to\'ldiring.', 'error');
+        return;
+    }
+    if (phoneDigits.length < 9) {
+        showNotification('Telefon raqamini to\'g\'ri kiriting.', 'error');
+        return;
+    }
+
+    // Simulate checkout process with summary
+    const itemsSummary = cart.map(i => `${i.name} x${i.quantity}`).join(', ');
+    showNotification(`Buyurtma qabul qilindi! ${firstName} ${lastName}, ${formatUZS(cartTotal)} so'm. Mahsulotlar: ${itemsSummary}`, 'success');
+
+    // Optionally persist order data locally
+    try {
+        const order = {
+            items: cart,
+            total: cartTotal,
+            customer: { firstName, lastName, phone, region, address },
+            deliveryType,
+            paymentMethod,
+            createdAt: new Date().toISOString()
+        };
+        const history = JSON.parse(localStorage.getItem('orders') || '[]');
+        history.push(order);
+        localStorage.setItem('orders', JSON.stringify(history));
+    } catch (e) {}
+
     // Clear cart
     cart = [];
     updateCartCount();
     updateCartDisplay();
-    
-    // Close modal
-    cartModal.classList.remove('active');
+
+    // Close modal after a short delay
+    setTimeout(() => cartModal.classList.remove('active'), 600);
 });
 
 // Add CSS for animations
@@ -447,4 +560,49 @@ mobileStyle.textContent = `
     }
 `;
 document.head.appendChild(mobileStyle);
+
+// UZS currency formatting
+function formatUZS(value) {
+    try {
+        const num = Number(value) || 0;
+        return num.toLocaleString('uz-UZ');
+    } catch (e) {
+        return value;
+    }
+}
+
+// Ensure product images always display
+function enhanceProductImages() {
+    const fallbackDataUri =
+        'data:image/svg+xml;utf8,' +
+        encodeURIComponent(
+            `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+                <defs>
+                    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0%" stop-color="#e5e7eb"/>
+                        <stop offset="100%" stop-color="#cbd5e1"/>
+                    </linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#g)"/>
+                <g fill="#9ca3af">
+                    <circle cx="400" cy="260" r="80" />
+                    <rect x="260" y="360" width="280" height="20" rx="10" />
+                </g>
+            </svg>`
+        );
+
+    document.querySelectorAll('.product-image img').forEach(img => {
+        img.loading = img.loading || 'lazy';
+        img.decoding = img.decoding || 'async';
+        img.setAttribute('referrerpolicy', 'no-referrer');
+        img.addEventListener('error', () => {
+            if (img.dataset.fallbackApplied) return;
+            img.dataset.fallbackApplied = 'true';
+            img.src = fallbackDataUri;
+            img.removeAttribute('srcset');
+            img.style.objectFit = 'contain';
+            img.style.background = '#f3f4f6';
+        }, { once: true });
+    });
+}
 
