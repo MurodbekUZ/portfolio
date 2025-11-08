@@ -731,6 +731,24 @@ section {
     opacity: 0.9;
 }
 
+/* Telegram (shaxsiy) - ko'k rang */
+.social-telegram {
+    background: #0088cc;
+}
+
+.social-telegram:hover {
+    background: #006699;
+}
+
+/* Telegram kanal - binafsha rang */
+.social-telegram-channel {
+    background: #9466ff;
+}
+
+.social-telegram-channel:hover {
+    background: #7c52d9;
+}
+
 .contact-form {
     background: var(--card-bg);
     padding: 2rem;
