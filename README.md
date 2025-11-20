@@ -146,9 +146,9 @@ Bu loyiha MIT litsenziyasi ostida tarqatiladi. Bepul foydalaning va o'zgartiring
 
 Agar savollar bo'lsa yoki yordam kerak bo'lsa:
 
-- **Email**: your.email@example.com
-- **Telegram**: @yourusername
-- **GitHub**: @yourusername
+- **Email**: murodbekazatov126@gmail.com
+- **Telegram**: @MurodbekAzatov
+- **GitHub**: @MurodbekUz
 
 ---
 
