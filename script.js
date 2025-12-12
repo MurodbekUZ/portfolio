@@ -54,17 +54,16 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Animate skill bars on scroll
+// Animate skill bars on scroll (fallback for older browsers)
 const animateSkillBars = () => {
     const skillBars = document.querySelectorAll('.skill-progress');
     const skillsSection = document.querySelector('.skills');
     
     if (skillsSection) {
         const skillsSectionTop = skillsSection.offsetTop;
-        const skillsSectionHeight = skillsSection.offsetHeight;
         const windowHeight = window.innerHeight;
         
-        if (window.scrollY > skillsSectionTop - windowHeight + 200) {
+        if (window.scrollY > skillsSectionTop - windowHeight + 80) {
             skillBars.forEach(bar => {
                 const width = bar.getAttribute('data-width');
                 bar.style.width = width;
@@ -86,6 +85,19 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, observerOptions);
+
+// Dedicated observer for skill bars to ensure they fill when visible
+const skillBarObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const width = entry.target.getAttribute('data-width');
+            if (width) {
+                entry.target.style.width = width;
+            }
+            skillBarObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.35 });
 
 // Add animation classes to elements
 document.addEventListener('DOMContentLoaded', () => {
@@ -125,45 +137,51 @@ document.addEventListener('DOMContentLoaded', () => {
         category.style.animationDelay = `${index * 0.1}s`;
         observer.observe(category);
     });
+
+    // Observe each skill bar for smooth fill on mobile & desktop
+    const skillBars = document.querySelectorAll('.skill-progress');
+    skillBars.forEach(bar => skillBarObserver.observe(bar));
 });
 
 // Contact form handling
 const form = document.getElementById('form');
-const submitBtn = form.querySelector('button[type="submit"]');
+if (form) {
+    const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
 
-    const formData = new FormData(form);
-    formData.append("access_key", "0a44eec0-dae3-45d2-961b-602d9e45e044");
+        const formData = new FormData(form);
+        formData.append("access_key", "0a44eec0-dae3-45d2-961b-602d9e45e044");
 
-    const originalText = submitBtn.textContent;
+        const originalText = submitBtn.textContent;
 
-    submitBtn.textContent = "Sending...";
-    submitBtn.disabled = true;
+        submitBtn.textContent = "Yuborilmoqda...";
+        submitBtn.disabled = true;
 
-    try {
-        const response = await fetch("https://api.web3forms.com/submit", {
-            method: "POST",
-            body: formData
-        });
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
 
-        const data = await response.json();
+            const data = await response.json();
 
-        if (response.ok) {
-            alert("Success! Your message has been sent.");
-            form.reset();
-        } else {
-            alert("Error: " + data.message);
+            if (response.ok) {
+                alert("Success! Xabaringiz yuborildi.");
+                form.reset();
+            } else {
+                alert("Xatolik: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
         }
-
-    } catch (error) {
-        alert("Something went wrong. Please try again.");
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
+    });
+}
 
 // Email validation function
 function isValidEmail(email) {
