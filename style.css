@@ -655,9 +655,32 @@ section {
     border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-    .cert-grid {
+@media (max-width: 992px) {
+    .nav-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hero-container,
+    .about-content,
+    .contact-content {
         grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-buttons,
+    .contact-items,
+    .project-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-text {
+        text-align: center;
     }
 }
 
@@ -935,6 +958,15 @@ section {
     }
 
     .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .cert-grid {
         grid-template-columns: 1fr;
     }
 
