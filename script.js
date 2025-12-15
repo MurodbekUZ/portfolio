@@ -145,43 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Contact form handling
 const form = document.getElementById('form');
-if (form) {
-    const submitBtn = form.querySelector('button[type="submit"]');
-
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(form);
-        formData.append("access_key", "0a44eec0-dae3-45d2-961b-602d9e45e044");
-
-        const originalText = submitBtn.textContent;
-
-        submitBtn.textContent = "Yuborilmoqda...";
-        submitBtn.disabled = true;
-
-        try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                alert("Success! Xabaringiz yuborildi.");
-                form.reset();
-            } else {
-                alert("Xatolik: " + data.message);
-            }
-
-        } catch (error) {
-            alert("Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.");
-        } finally {
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }
-    });
-}
 
 // Email validation function
 function isValidEmail(email) {
