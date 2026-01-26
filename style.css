@@ -324,6 +324,21 @@ body {
     color: white;
 }
 
+.btn-resume {
+    background: #10b981;
+    color: white;
+}
+
+.btn-resume:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.btn-resume i {
+    margin-right: 8px;
+}
+
 .hero-image {
     display: flex;
     justify-content: center;
