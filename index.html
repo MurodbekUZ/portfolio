@@ -27,7 +27,7 @@
     <link rel="icon" href="Murodbek copy.jpg" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -61,6 +61,11 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
@@ -91,7 +96,7 @@
             <h2 class="section-title">Sertifikatlar</h2>
             <div class="cert-grid">
                 <!-- Professional Specializations -->
-                <div class="cert-card">
+                <div class="cert-card glass">
                     <div class="cert-info">
                         <h3>Google Cybersecurity</h3>
                         <p>Professional Certificate</p>
@@ -101,7 +106,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cert-card">
+                <div class="cert-card glass">
                     <div class="cert-info">
                         <h3>Google Project Management</h3>
                         <p>Professional Certificate</p>
@@ -150,15 +155,15 @@
                         intilish mening professional tamoyilimdir.
                     </p>
                     <div class="about-stats">
-                        <div class="stat">
+                        <div class="stat glass">
                             <h4>2+</h4>
                             <p>Bajarilgan loyihalar</p>
                         </div>
-                        <div class="stat">
+                        <div class="stat glass">
                             <h4>2+</h4>
                             <p>Mamnun mijozlar</p>
                         </div>
-                        <div class="stat">
+                        <div class="stat glass">
                             <h4>1+</h4>
                             <p>Yillik tajriba</p>
                         </div>
@@ -182,29 +187,37 @@
                     <h3>Frontend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-html5"></i> HTML5</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-js-square"></i> JavaScript</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-react"></i> React</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="75%"></div>
                             </div>
@@ -215,29 +228,37 @@
                     <h3>Backend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-node-js"></i> Node.js</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-database"></i> SQL</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express.js</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-server"></i> Express.js</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="70%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-database"></i> MongoDB</span>
+                                <span class="skill-percentage">65%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="65%"></div>
                             </div>
@@ -248,22 +269,28 @@
                     <h3>Mobile & Desktop</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Dart</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-mobile-alt"></i> Dart</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-android"></i>
-                            <span>Flutter</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-android"></i> Flutter</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-java"></i> Java</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="70%"></div>
                             </div>
@@ -274,22 +301,28 @@
                     <h3>Tools</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-git-alt"></i> Git</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fab fa-figma"></i>
-                            <span>Figma</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fab fa-figma"></i> Figma</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="75%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <i class="fas fa-palette"></i>
-                            <span>Photoshop</span>
+                            <div class="skill-info">
+                                <span class="skill-name"><i class="fas fa-palette"></i> Photoshop</span>
+                                <span class="skill-percentage">60%</span>
+                            </div>
                             <div class="skill-bar">
                                 <div class="skill-progress" data-width="60%"></div>
                             </div>
@@ -305,7 +338,7 @@
         <div class="container">
             <h2 class="section-title">Loyihalar</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card glass">
                     <div class="project-image">
                         <div class="image-placeholder">
                             <i class="fas fa-laptop-code"></i>
@@ -326,7 +359,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card glass">
                     <div class="project-image">
                         <div class="image-placeholder">
                             <i class="fas fa-robot"></i>
@@ -348,7 +381,44 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tez-Yoz</h3>
+                        <p>Klaviatura mahoratingizni professional darajaga ko'tarish uchun platforma. Tezlikni o'lchash, xatolarni tahlil qilish va natijalarni kuzatish imkoniyati.</p>
+                        <div class="project-tech">
+                            <span>Vite</span>
+                            <span>React</span>
+                            <span>Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://tez-yoz-sayt.vercel.app/" class="btn btn-small" target="_blank">Ko'rish</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Habit Tracker Bot</h3>
+                        <p>Kundalik rejimlarni boshqarish va odatlarni kuzatish uchun universal Telegram bot. Eslatmalar, statistika va natijalar tahlili.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Aiogram</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://t.me/kundalik_rejimbot" class="btn btn-small" target="_blank">Ko'rish</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card glass">
                     <div class="project-image">
                         <div class="image-placeholder">
                             <i class="fas fa-id-card-alt"></i>

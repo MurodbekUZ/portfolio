@@ -33,24 +33,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar background change on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     
-    if (window.scrollY > 100) {
-        if (isDark) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-        }
+    if (window.scrollY > 50) {
+        navbar.style.background = 'var(--card-bg)';
+        navbar.style.padding = '1rem 0';
+        navbar.style.boxShadow = 'var(--shadow-premium)';
     } else {
-        if (isDark) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        }
+        navbar.style.background = 'transparent';
+        navbar.style.padding = '1.25rem 0';
+        navbar.style.boxShadow = 'none';
     }
 });
 
