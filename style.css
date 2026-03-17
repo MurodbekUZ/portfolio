@@ -909,6 +909,7 @@ section {
     .nav-toggle {
         display: flex;
     }
+}
 
 /* --- Premium Nav Actions --- */
 .nav-actions {
