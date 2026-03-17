@@ -429,15 +429,8 @@ class DarkMode {
             this.enableDarkMode();
         }
         
-        // Add animation effect
-        const icon = this.themeIcon;
-        icon.style.transform = 'rotate(360deg) scale(0)';
-        
-        setTimeout(() => {
-            icon.style.transform = 'rotate(0) scale(1)';
-        }, 300);
-        
-        this.themeToggle.style.transform = 'scale(0.8)';
+        // Brief scale feedback
+        this.themeToggle.style.transform = 'scale(0.9)';
         setTimeout(() => {
             this.themeToggle.style.transform = 'scale(1)';
         }, 150);

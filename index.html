@@ -46,15 +46,21 @@
                 <a href="#certificates" class="nav-link" data-i18n="nav-certs">Sertifikatlar</a>
                 <a href="#contact" class="nav-link" data-i18n="nav-contact">Kontakt</a>
             </div>
-            <div class="lang-switcher">
-                <button class="lang-btn active" data-lang="uz">UZ</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-            <div class="theme-toggle">
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Dark mode toggle">
-                    <i class="fas fa-moon" id="theme-icon"></i>
-                </button>
+            <div class="nav-actions">
+                <div class="lang-switcher-wrapper">
+                    <div class="lang-switcher glass">
+                        <button class="lang-btn active" data-lang="uz">UZ</button>
+                        <button class="lang-btn" data-lang="ru">RU</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                        <div class="lang-slider"></div>
+                    </div>
+                </div>
+                <div class="theme-toggle-wrapper">
+                    <button id="theme-toggle" class="theme-toggle-btn glass" aria-label="Toggle Theme">
+                        <i class="fas fa-sun sun-icon"></i>
+                        <i class="fas fa-moon moon-icon"></i>
+                    </button>
+                </div>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -175,11 +181,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
