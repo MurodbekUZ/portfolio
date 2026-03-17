@@ -375,7 +375,6 @@ document.head.appendChild(loadingStyle);
 class DarkMode {
     constructor() {
         this.themeToggle = document.getElementById('theme-toggle');
-        this.themeIcon = document.getElementById('theme-icon');
         this.init();
     }
 
@@ -409,14 +408,12 @@ class DarkMode {
 
     enableDarkMode() {
         document.documentElement.setAttribute('data-theme', 'dark');
-        this.themeIcon.className = 'fas fa-sun';
         localStorage.setItem('theme', 'dark');
         this.updateNavbarScroll();
     }
 
     enableLightMode() {
         document.documentElement.setAttribute('data-theme', 'light');
-        this.themeIcon.className = 'fas fa-moon';
         localStorage.setItem('theme', 'light');
         this.updateNavbarScroll();
     }
