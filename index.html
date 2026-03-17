@@ -39,12 +39,17 @@
                 <a href="#home">Portfolio</a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Bosh sahifa</a>
-                <a href="#about" class="nav-link">O'zim haqimda</a>
-                <a href="#skills" class="nav-link">Mahoratlar</a>
-                <a href="#projects" class="nav-link">Loyihalar</a>
-                <a href="#certificates" class="nav-link">Sertifikatlar</a>
-                <a href="#contact" class="nav-link">Kontakt</a>
+                <a href="#home" class="nav-link" data-i18n="nav-home">Bosh sahifa</a>
+                <a href="#about" class="nav-link" data-i18n="nav-about">O'zim haqimda</a>
+                <a href="#skills" class="nav-link" data-i18n="nav-skills">Mahoratlar</a>
+                <a href="#projects" class="nav-link" data-i18n="nav-projects">Loyihalar</a>
+                <a href="#certificates" class="nav-link" data-i18n="nav-certs">Sertifikatlar</a>
+                <a href="#contact" class="nav-link" data-i18n="nav-contact">Kontakt</a>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="uz">UZ</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
             </div>
             <div class="theme-toggle">
                 <button id="theme-toggle" class="theme-toggle-btn" aria-label="Dark mode toggle">
@@ -68,19 +73,19 @@
         </div>
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">
+                <h1 class="hero-title" data-i18n="hero-title">
                     Salom, men Azatov Murodbek — Software Developer
                 </h1>
-                <p class="hero-subtitle">Veb dasturchi va dizayner</p>
-                <p class="hero-description">
+                <p class="hero-subtitle" data-i18n="hero-subtitle">Veb dasturchi va dizayner</p>
+                <p class="hero-description" data-i18n="hero-desc">
                     Zamonaviy va chiroyli veb-saytlar yaratishga ixtisoslashganman.
                     Yaratijaviy yechimlarni texnik mahorat bilan uyg'unlashtirib,
                     mijozlar uchun eng yaxshi tajribani taqdim etaman.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Loyihalarim</a>
-                    <a href="Murodbek_Azatov_CV.pdf" class="btn btn-resume" download><i class="fas fa-file-download"></i> Rezyume</a>
-                    <a href="#contact" class="btn btn-secondary">Bog'lanish</a>
+                    <a href="#projects" class="btn btn-primary" data-i18n="hero-btn-projects">Loyihalarim</a>
+                    <a href="Murodbek_Azatov_CV.pdf" class="btn btn-resume" download><i class="fas fa-file-download"></i> <span data-i18n="hero-btn-resume">Rezyume</span></a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero-btn-contact">Bog'lanish</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -128,44 +133,45 @@
             <h2 class="section-title">Haqida</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Men kimman?</h3>
-                    <p>
-                    <p>
-                        Men zamonaviy raqamli yechimlar yaratishga ixtisoslashgan va texnologiyalarga ishtiyoqi baland
-                        bo'lgan
-                        Software Developer'man. Hozirda asosiy e'tiborimni Web-tizimlar va murakkab Telegram botlari
-                        ishlab
-                        chiqishga qaratganman (HTML, CSS, JavaScript, React va Python).
-                    </p>
-                    <p>
-                        Xorazm viloyati Tuproqqal'a tumanidagi 4-son maktabning 11-sinf o'quvchisi bo'lishimga qaramay,
-                        IT sohasida amaliy tajriba orttirishga va professional darajaga chiqishga intilaman.
-                        "Al-Xorazmiy
-                        vorislari" IT kurslarida tahsil olib, nazariy bilimlarni real loyihalar bilan mustahkamlab
-                        kelyapman.
-                    </p>
-                    <p>
-                        Mening yondashuvim — faqat kod yozish emas, balki foydalanuvchilar va biznes uchun aniq qiymat
-                        generatsiya qiladigan mahsulotlar yaratishdir. Har bir loyihada dizayn nafosati va backend
-                        tizimining barqarorligini uyg'unlikda saqlashga harakat qilaman.
-                    </p>
-                    <p>
-                        Kelajakdagi maqsadim — TATU bitiruvchisi bo'lish va IT olamida o'z sohasining yetuk mutaxassisi
-                        sifatida global miqyosdagi yirik loyihalarda ishtirok etish. Doimiy o'rganish va yangilikka
-                        intilish mening professional tamoyilimdir.
-                    </p>
+                    <div class="about-intro">
+                        <h3 data-i18n="about-title">Men kimman?</h3>
+                        <p data-i18n="about-intro-text">
+                            Men zamonaviy raqamli yechimlar yaratishga ixtisoslashgan va texnologiyalarga ishtiyoqi baland
+                            bo'lgan <strong>Software Developer</strong>'man. Hozirda asosiy e'tiborimni Web-tizimlar va
+                            murakkab Telegram botlari ishlab chiqishga qaratganman.
+                        </p>
+                    </div>
+
+                    <div class="about-cards">
+                        <div class="about-card glass">
+                            <div class="about-card-icon"><i class="fas fa-rocket"></i></div>
+                            <h4 data-i18n="about-card1-title">Asosiy Maqsad</h4>
+                            <p data-i18n="about-card1-desc">TATU talabasi bo'lish va IT olamida global miqyosdagi yirik loyihalarda yetuk mutaxassis sifatida qatnashish.</p>
+                        </div>
+                        <div class="about-card glass">
+                            <div class="about-card-icon"><i class="fas fa-lightbulb"></i></div>
+                            <h4 data-i18n="about-card2-title">Ishga Yondashuv</h4>
+                            <p data-i18n="about-card2-desc">Faqat kod yozish emas, balki foydalanuvchilar va biznes uchun aniq qiymat yaratadigan mahsulotlar yaratish.</p>
+                        </div>
+                        <div class="about-card glass">
+                            <div class="about-card-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h4 data-i18n="about-card3-title">Doimiy Bilim</h4>
+                            <p data-i18n="about-card3-desc">"Al-Xorazmiy vorislari" IT kurslari orqali nazariy bilimlarni real loyihalarda mustahkamlab bormoqdaman.</p>
+                        </div>
+                    </div>
+
                     <div class="about-stats">
                         <div class="stat glass">
                             <h4>2+</h4>
-                            <p>Bajarilgan loyihalar</p>
+                            <p data-i18n="stat-projects">Loyiha</p>
                         </div>
                         <div class="stat glass">
                             <h4>2+</h4>
-                            <p>Mamnun mijozlar</p>
+                            <p data-i18n="stat-clients">Mijoz</p>
                         </div>
                         <div class="stat glass">
                             <h4>1+</h4>
-                            <p>Yillik tajriba</p>
+                            <p data-i18n="stat-years">Yil</p>
                         </div>
                     </div>
                 </div>
@@ -181,10 +187,10 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Mahoratlar</h2>
+            <h2 class="section-title" data-i18n="skills-title">Mahoratlar</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Frontend</h3>
+                    <h3 data-i18n="skills-frontend">Frontend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -225,7 +231,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Backend</h3>
+                    <h3 data-i18n="skills-backend">Backend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -266,7 +272,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Mobile & Desktop</h3>
+                    <h3 data-i18n="skills-mobile">Mobile & Desktop</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -298,7 +304,7 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools</h3>
+                    <h3 data-i18n="skills-tools">Tools</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-info">
@@ -336,7 +342,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Loyihalar</h2>
+            <h2 class="section-title" data-i18n="projects-title">Loyihalar</h2>
             <div class="projects-grid">
                 <div class="project-card glass">
                     <div class="project-image">
@@ -345,17 +351,16 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>E-commerce Sayti</h3>
-                        <p>Zamonaviy dizayn va to'liq funksionallik bilan onlayn do'kon sayti. Mahsulotlar katalogi,
-                            savatcha va to'lov tizimi integratsiyasi.</p>
+                        <h3 data-i18n="project1-title">E-commerce Sayti</h3>
+                        <p data-i18n="project1-desc">Zamonaviy dizayn va to'liq funksionallik bilan onlayn do'kon sayti. Mahsulotlar katalogi, savatcha va to'lov tizimi integratsiyasi.</p>
                         <div class="project-tech">
                             <span>HTML/CSS</span>
                             <span>JavaScript</span>
                             <span>Firebase</span>
                         </div>
                         <div class="project-links">
-                            <a href="ecommerce.html" class="btn btn-small">Ko'rish</a>
-                            <a href="#" class="btn btn-small btn-outline">Kod</a>
+                            <a href="ecommerce.html" class="btn btn-small" data-i18n="btn-view">Ko'rish</a>
+                            <a href="#" class="btn btn-small btn-outline" data-i18n="btn-code">Kod</a>
                         </div>
                     </div>
                 </div>
@@ -366,16 +371,15 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Test Bot</h3>
-                        <p>Telegram bot yordamida testlar o'tkazish, natijalarni avtomatik baholash va
-                            foydalanuvchilarga statistika taqdim etish tizimi.</p>
+                        <h3 data-i18n="project2-title">Test Bot</h3>
+                        <p data-i18n="project2-desc">Telegram bot yordamida testlar o'tkazish, natijalarni avtomatik baholash va foydalanuvchilarga statistika taqdim etish tizimi.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Aiogram</span>
                             <span>SQLite</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://t.me/testbot13f_bot" class="btn btn-small" target="_blank">Ko'rish</a>
+                            <a href="https://t.me/testbot13f_bot" class="btn btn-small" target="_blank" data-i18n="btn-view">Ko'rish</a>
                             <a href="https://github.com/MurodbekUz/Test-bot" class="btn btn-small btn-outline"
                                 target="_blank">GitHub</a>
                         </div>
@@ -388,15 +392,15 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Tez-Yoz</h3>
-                        <p>Klaviatura mahoratingizni professional darajaga ko'tarish uchun platforma. Tezlikni o'lchash, xatolarni tahlil qilish va natijalarni kuzatish imkoniyati.</p>
+                        <h3 data-i18n="project3-title">Tez-Yoz</h3>
+                        <p data-i18n="project3-desc">Klaviatura mahoratingizni professional darajaga ko'tarish uchun platforma. Tezlikni o'lchash, xatolarni tahlil qilish va natijalarni kuzatish imkoniyati.</p>
                         <div class="project-tech">
                             <span>Vite</span>
                             <span>React</span>
                             <span>Tailwind</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://tez-yoz-sayt.vercel.app/" class="btn btn-small" target="_blank">Ko'rish</a>
+                            <a href="https://tez-yoz-sayt.vercel.app/" class="btn btn-small" target="_blank" data-i18n="btn-view">Ko'rish</a>
                         </div>
                     </div>
                 </div>
@@ -407,14 +411,14 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Habit Tracker Bot</h3>
-                        <p>Kundalik rejimlarni boshqarish va odatlarni kuzatish uchun universal Telegram bot. Eslatmalar, statistika va natijalar tahlili.</p>
+                        <h3 data-i18n="project4-title">Habit Tracker Bot</h3>
+                        <p data-i18n="project4-desc">Kundalik rejimlarni boshqarish va odatlarni kuzatish uchun universal Telegram bot. Eslatmalar, statistika va natijalar tahlili.</p>
                         <div class="project-tech">
                             <span>Python</span>
                             <span>Aiogram</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://t.me/kundalik_rejimbot" class="btn btn-small" target="_blank">Ko'rish</a>
+                            <a href="https://t.me/kundalik_rejimbot" class="btn btn-small" target="_blank" data-i18n="btn-view">Ko'rish</a>
                         </div>
                     </div>
                 </div>
@@ -465,11 +469,11 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Kontakt</h2>
+            <h2 class="section-title" data-i18n="contact-title">Kontakt</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Bog'lanish</h3>
-                    <p>Loyiha yoki hamkorlik haqida gaplashish uchun men bilan bog'laning.</p>
+                    <h3 data-i18n="contact-h3">Bog'lanish</h3>
+                    <p data-i18n="contact-p">Loyiha yoki hamkorlik haqida gaplashish uchun men bilan bog'laning.</p>
                     <div class="contact-items">
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -513,7 +517,7 @@
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <div class="form-group">
-                            <label for="name">Ism familya</label>
+                            <label for="name" data-i18n="form-name">Ism familya</label>
                             <input id="name" type="text" name="name" placeholder="To'liq ismingiz" required>
                         </div>
                         <div class="form-group">
@@ -521,7 +525,7 @@
                             <input id="email" type="email" name="email" placeholder="email@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Xabar</label>
+                            <label for="message" data-i18n="form-msg">Xabar</label>
                             <textarea id="message" name="message"
                                 placeholder="Loyiha yoki taklif haqida qisqacha yozing" required></textarea>
                         </div>
@@ -538,7 +542,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Portfolio. Barcha huquqlar himoyalangan.</p>
+            <p data-i18n="footer-text">&copy; 2024 Portfolio. Barcha huquqlar himoyalangan.</p>
         </div>
     </footer>
 

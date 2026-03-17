@@ -430,6 +430,13 @@ class DarkMode {
         }
         
         // Add animation effect
+        const icon = this.themeIcon;
+        icon.style.transform = 'rotate(360deg) scale(0)';
+        
+        setTimeout(() => {
+            icon.style.transform = 'rotate(0) scale(1)';
+        }, 300);
+        
         this.themeToggle.style.transform = 'scale(0.8)';
         setTimeout(() => {
             this.themeToggle.style.transform = 'scale(1)';
@@ -443,8 +450,200 @@ class DarkMode {
     }
 }
 
-// Initialize dark mode when DOM is loaded
+// Language Management
+class LanguageManager {
+    constructor() {
+        this.langBtns = document.querySelectorAll('.lang-btn');
+        this.translations = {
+            'uz': {
+                'nav-home': 'Bosh sahifa',
+                'nav-about': "O'zim haqimda",
+                'nav-skills': 'Mahoratlar',
+                'nav-projects': 'Loyihalar',
+                'nav-certs': 'Sertifikatlar',
+                'nav-contact': 'Kontakt',
+                'hero-title': 'Salom, men Azatov Murodbek — Software Developer',
+                'hero-subtitle': 'Veb dasturchi va dizayner',
+                'hero-desc': "Zamonaviy va chiroyli veb-saytlar yaratishga ixtisoslashganman. Yaratijaviy yechimlarni texnik mahorat bilan uyg'unlashtirib, mijozlar uchun eng yaxshi tajribani taqdim etaman.",
+                'hero-btn-projects': 'Loyihalarim',
+                'hero-btn-resume': 'Rezyume',
+                'hero-btn-contact': "Bog'lanish",
+                'about-title': 'Men kimman?',
+                'about-intro-text': "Men zamonaviy raqamli yechimlar yaratishga ixtisoslashgan va texnologiyalarga ishtiyoqi baland bo'lgan Software Developer'man. Hozirda asosiy e'tiborimni Web-tizimlar va murakkab Telegram botlari ishlab chiqishga qaratganman.",
+                'about-card1-title': 'Asosiy Maqsad',
+                'about-card1-desc': 'TATU talabasi bo\'lish va IT olamida global miqyosdagi yirik loyihalarda yetuk mutaxassis sifatida qatnashish.',
+                'about-card2-title': 'Ishga Yondashuv',
+                'about-card2-desc': 'Faqat kod yozish emas, balki foydalanuvchilar va biznes uchun aniq qiymat yaratadigan mahsulotlar yaratish.',
+                'about-card3-title': 'Doimiy Bilim',
+                'about-card3-desc': '"Al-Xorazmiy vorislari" IT kurslari orqali nazariy bilimlarni real loyihalarda mustahkamlab bormoqdaman.',
+                'stat-projects': 'Loyiha',
+                'stat-clients': 'Mijoz',
+                'stat-years': 'Yil',
+                'skills-title': 'Mahoratlar',
+                'skills-frontend': 'Frontend',
+                'skills-backend': 'Backend',
+                'skills-mobile': 'Mobile & Desktop',
+                'skills-tools': 'Tools',
+                'projects-title': 'Loyihalar',
+                'project1-title': 'E-commerce Sayti',
+                'project1-desc': 'Zamonaviy dizayn va to\'liq funksionallik bilan onlayn do\'kon sayti.',
+                'project2-title': 'Test Bot',
+                'project2-desc': 'Telegram bot yordamida testlar o\'tkazish va natijalarni baholash tizimi.',
+                'project3-title': 'Tez-Yoz',
+                'project3-desc': 'Klaviatura mahoratingizni professional darajaga ko\'tarish uchun platforma.',
+                'project4-title': 'Habit Tracker Bot',
+                'project4-desc': 'Kundalik rejimlarni boshqarish va odatlarni kuzatish uchun Telegram bot.',
+                'btn-view': 'Ko\'rish',
+                'btn-code': 'Kod',
+                'contact-title': 'Kontakt',
+                'contact-h3': 'Bog\'lanish',
+                'contact-p': 'Loyiha yoki hamkorlik haqida gaplashish uchun men bilan bog\'laning.',
+                'form-name': 'Ism familya',
+                'form-msg': 'Xabar',
+                'form-btn': 'Xabarni yuborish',
+                'footer-text': '© 2024 Portfolio. Barcha huquqlar himoyalangan.'
+            },
+            'ru': {
+                'nav-home': 'Главная',
+                'nav-about': 'О себе',
+                'nav-skills': 'Навыки',
+                'nav-projects': 'Проекты',
+                'nav-certs': 'Сертификаты',
+                'nav-contact': 'Контакт',
+                'hero-title': 'Привет, я Азатов Муродбек — Software Developer',
+                'hero-subtitle': 'Веб-разработчик и дизайнер',
+                'hero-desc': 'Я специализируюсь на создании современных и красивых веб-сайтов. Сочетая творческие решения с техническими навыками, я предоставляю лучший опыт для клиентов.',
+                'hero-btn-projects': 'Мои проекты',
+                'hero-btn-resume': 'Резюме',
+                'hero-btn-contact': 'Связаться',
+                'about-title': 'Кто я?',
+                'about-intro-text': 'Я Software Developer, специализирующийся на создании современных цифровых решений и увлеченный технологиями. В настоящее время я сосредоточен на разработке веб-систем и сложных Telegram-ботов.',
+                'about-card1-title': 'Основная цель',
+                'about-card1-desc': 'Стать студентом ТАТУ и участвовать в крупных глобальных проектах в мире ИТ как ведущий специалист.',
+                'about-card2-title': 'Подход к работе',
+                'about-card2-desc': 'Не просто писать код, а создавать продукты, которые приносят реальную пользу пользователям и бизнесу.',
+                'about-card3-title': 'Постоянное обучение',
+                'about-card3-desc': 'Я укрепляю теоретические знания в реальных проектах через ИТ-курсы "Наследники Аль-Хорезми".',
+                'stat-projects': 'Проектов',
+                'stat-clients': 'Клиентов',
+                'stat-years': 'Год опыта',
+                'skills-title': 'Навыки',
+                'skills-frontend': 'Фронтенд',
+                'skills-backend': 'Бэкенд',
+                'skills-mobile': 'Мобильные и ПК',
+                'skills-tools': 'Инструменты',
+                'projects-title': 'Проекты',
+                'project1-title': 'E-commerce Сайт',
+                'project1-desc': 'Сайт интернет-магазина с современным дизайном и полной функциональностью.',
+                'project2-title': 'Тест Бот',
+                'project2-desc': 'Система проведения тестов и оценки результатов с помощью Telegram-бота.',
+                'project3-title': 'Tez-Yoz',
+                'project3-desc': 'Платформа для повышения навыков владения клавиатурой до профессионального уровня.',
+                'project4-title': 'Habit Tracker Bot',
+                'project4-desc': 'Универсальный Telegram-бот для управления повседневными делами и привычками.',
+                'btn-view': 'Смотреть',
+                'btn-code': 'Код',
+                'contact-title': 'Контакт',
+                'contact-h3': 'Связаться',
+                'contact-p': 'Свяжитесь со мной, чтобы обсудить проект или сотрудничество.',
+                'form-name': 'Имя и фамилия',
+                'form-msg': 'Сообщение',
+                'form-btn': 'Отправить сообщение',
+                'footer-text': '© 2024 Портфолио. Все права защищены.'
+            },
+            'en': {
+                'nav-home': 'Home',
+                'nav-about': 'About',
+                'nav-skills': 'Skills',
+                'nav-projects': 'Projects',
+                'nav-certs': 'Certificates',
+                'nav-contact': 'Contact',
+                'hero-title': 'Hi, I am Murodbek Azatov — Software Developer',
+                'hero-subtitle': 'Web Developer & Designer',
+                'hero-desc': 'I specialize in creating modern and beautiful websites. Combining creative solutions with technical skills, I provide the best experience for clients.',
+                'hero-btn-projects': 'My Projects',
+                'hero-btn-resume': 'Resume',
+                'hero-btn-contact': 'Contact Me',
+                'about-title': 'Who am I?',
+                'about-intro-text': 'I am a Software Developer specialized in creating modern digital solutions and passionate about technology. Currently, my main focus is on developing Web systems and complex Telegram bots.',
+                'about-card1-title': 'Main Goal',
+                'about-card1-desc': 'Become a TUIT student and participate in large-scale global IT projects as a leading specialist.',
+                'about-card2-title': 'Work Approach',
+                'about-card2-desc': 'Not just writing code, but creating products that generate clear value for users and businesses.',
+                'about-card3-title': 'Constant Learning',
+                'about-card3-desc': 'I am strengthening theoretical knowledge through real projects via "Heirs of Al-Khwarizmi" IT courses.',
+                'stat-projects': 'Projects',
+                'stat-clients': 'Clients',
+                'stat-years': 'Year Experience',
+                'skills-title': 'Skills',
+                'skills-frontend': 'Frontend',
+                'skills-backend': 'Backend',
+                'skills-mobile': 'Mobile & Desktop',
+                'skills-tools': 'Tools',
+                'projects-title': 'Projects',
+                'project1-title': 'E-commerce Site',
+                'project1-desc': 'Online store site with modern design and full functionality.',
+                'project2-title': 'Test Bot',
+                'project2-desc': 'System for conducting tests and evaluating results using a Telegram bot.',
+                'project3-title': 'Tez-Yoz',
+                'project3-desc': 'Platform to raise your keyboard skills to a professional level.',
+                'project4-title': 'Habit Tracker Bot',
+                'project4-desc': 'Universal Telegram bot for managing daily routines and tracking habits.',
+                'btn-view': 'View',
+                'btn-code': 'Code',
+                'contact-title': 'Contact',
+                'contact-h3': 'Get in Touch',
+                'contact-p': 'Contact me to discuss a project or collaboration.',
+                'form-name': 'Full Name',
+                'form-msg': 'Message',
+                'form-btn': 'Send Message',
+                'footer-text': '© 2024 Portfolio. All rights reserved.'
+            }
+        };
+        this.init();
+    }
+
+    init() {
+        const savedLang = localStorage.getItem('language') || 'uz';
+        this.setLanguage(savedLang);
+
+        this.langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                this.setLanguage(lang);
+            });
+        });
+    }
+
+    setLanguage(lang) {
+        localStorage.setItem('language', lang);
+        
+        // Update buttons UI
+        this.langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+
+        // Update content
+        const elements = document.querySelectorAll('[data-i18n]');
+        elements.forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (this.translations[lang][key]) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = this.translations[lang][key];
+                } else {
+                    el.innerText = this.translations[lang][key];
+                }
+            }
+        });
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+    }
+}
+
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new DarkMode();
+    new LanguageManager();
 });
 

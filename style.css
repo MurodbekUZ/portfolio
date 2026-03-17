@@ -352,22 +352,92 @@ section {
     line-height: 1.8;
 }
 
-.about-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
+.about-intro {
+    margin-bottom: 3rem;
+    text-align: left;
 }
 
-.stat {
-    text-align: center;
-    padding: 2rem 1rem;
+.about-intro h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.about-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    max-width: 800px;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.about-card {
+    padding: 2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-glass);
     background: var(--card-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid var(--border-glass);
-    border-radius: 20px;
     box-shadow: var(--shadow-premium);
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.about-card-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-secondary);
+    color: var(--accent-primary);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-premium);
+}
+
+.about-card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.about-stats {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+
+.stat {
+    padding: 1.5rem 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid var(--border-glass);
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-premium);
+    min-width: 140px;
     transition: transform 0.3s ease;
 }
 
@@ -376,7 +446,7 @@ section {
 }
 
 .stat h4 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     font-weight: 800;
     color: var(--accent-primary);
     margin-bottom: 0.25rem;
@@ -836,15 +906,82 @@ section {
         display: flex;
     }
 
-    .theme-toggle {
-        margin-right: 0.5rem;
-    }
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
 
-    .theme-toggle-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
+.theme-toggle-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--shadow-premium);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1) rotate(15deg);
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.theme-toggle-btn i {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+    background: hsla(245, 82%, 67%, 0.1);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+    background: hsla(42, 96%, 58%, 0.1);
+    border-color: var(--accent-secondary);
+    color: var(--accent-secondary);
+}
+
+.theme-toggle-btn:active {
+    transform: scale(0.9);
+}
+
+/* Language Switcher */
+.lang-switcher {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-glass);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.lang-btn:hover, .lang-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
 
     .nav-toggle.active .bar:nth-child(2) {
         opacity: 0;
